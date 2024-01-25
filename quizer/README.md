@@ -16,19 +16,21 @@ It aims to prevent over-scrolling during quizzes and provides a convenient summa
 
 To display the quiz checker card, run the following command in the console:
 
-```javascript```
+```javascript
 setupCard();
+```
 
 ### Removing the Card
 
 To remove the quiz checker card, run the following command in the console:
 
-```javascript```
+```javascript
 tearDownCard();
+```
 
 ## Note
 
-📝 **Note:** Card output may be incorrect if user inavertently changes an answer to
+📝 **Note:** Card output may be incorrect if user inadvertently changes an answer to
 a question already passed.
 
 ## Authors
