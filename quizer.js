@@ -32,13 +32,13 @@ function check() {
 	let errorDifference = newErrorCount - oldErrorCount;
 
 	/* Prepare output message */
-	let msg = '<em>After checking at ' + new Date().toLocaleString('en-US', dateFormat) + '...</em><hr/>';
+	let msg = '<em>After checking at ' + new Date().toLocaleString('en-US', dateFormat) + '</em><hr/>';
 	if (errorDifference < 0)
-		msg += 'You Passed: <h4>' + Math.abs(errorDifference) + '</h4>';
+		msg += 'You Passed: <h4>\uD83D\uDE09 ' + Math.abs(errorDifference) + '</h4>';
 	else if (errorDifference > 0)
-		msg += 'You Failed: <h4>' + errorDifference + '</h4>';
+		msg += 'You Failed: <h4>\uD83D\uDE14 ' + errorDifference + '</h4>';
 	else
-		msg += 'No change!<br/>';
+		msg += 'No change! \uD83D\uDE42<br/>';
 
 	let done = questionCount - newErrorCount;
 	msg += 'Completed quiz questions: <h4>' + done + ' / ' + questionCount + '</h4>';
@@ -105,7 +105,7 @@ function setupCard() {
 
 		/* Card header */
 		const cardHeader = document.createElement('h3');
-		cardHeader.innerText = 'Quiz Checker';
+		cardHeader.innerText = 'Quiz Checker \u2714';
 		cardHeader.style.textAlign = 'center';
 		cardHeader.style.backgroundColor = '#2980b9';
 		cardHeader.style.color = '#fff';
@@ -114,7 +114,7 @@ function setupCard() {
 		/* Card body */
 		const cardContent = document.createElement('div');
 		cardContent.id = 'quizMsg';
-		cardContent.innerText = 'Nice and quiet here! \u00fa.';
+		cardContent.innerText = 'Nice and quiet here! \uD83D\uDE42';
 		cardContent.style.color = '#fff';
 		cardContent.style.textAlign = 'center';
 		cardContent.style.marginBottom = '10px';
